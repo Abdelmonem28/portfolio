@@ -1,0 +1,28 @@
+#about{
+    p{
+        grid-column: span 8;
+        margin: 10px 0;
+    }
+    .image{
+        grid-column: 3/7;
+        grid-row: span 2;
+        position: relative;
+        border: 6px solid white;
+        margin: 10px 0;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -13px;
+            top: 13px;
+            border: 6px solid crimson;
+            z-index: -1;
+        }
+    }
+}

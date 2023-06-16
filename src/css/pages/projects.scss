@@ -1,0 +1,43 @@
+.main-title{
+    grid-column: 2/8;
+    grid-row: 1;
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    color: crimson;
+    &::before{
+        content: '';
+        width: 80%;
+        height: 1px;
+        position: absolute;
+        bottom: -5px;
+        left: 10%;
+        background-color: crimson;
+    }
+}
+#portfolio{
+    background-color: white;
+    .card{
+        grid-column: span 8;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: 1px 1px 20px rgba(0,0,0,0.7);
+        cursor: pointer;
+        transition: 0.2s ease;
+        &:hover{
+            transform: scale(1.05);
+            img{
+                opacity: 0.8;
+            }
+        }
+        .card-image{
+            width: 100%;
+            img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+}

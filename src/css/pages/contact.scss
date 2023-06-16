@@ -1,0 +1,26 @@
+#contact{
+    form{
+        grid-column: span 8;
+        grid-row: span 2;
+        input{
+            grid-column: span 8;
+            &:nth-child(4){
+                grid-column: 3/7;
+                color: crimson;
+                padding: 10px 30px;
+                border: 2px solid crimson;
+                text-align: center;
+                transition: 0.2s ease;
+                background-color: transparent;
+                &:hover{
+                    background-color: crimson;
+                    color: white;
+                }
+            }
+            &:nth-child(3){
+                grid-row: span 2;
+            }
+        }
+        
+    }
+}

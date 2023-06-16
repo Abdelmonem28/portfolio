@@ -1,0 +1,144 @@
+@use './pages/landing.scss';
+@use './pages/projects.scss';
+@use './pages/about.scss';
+@use './pages/contact.scss';
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+footer{
+    background-color: black;
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+        grid-column: 5/span 3;
+    }
+    i{
+        color: crimson;
+    }
+    h3{
+        color: crimson;
+        grid-column: span 4;
+    }
+}
+
+
+
+
+// media md
+
+@media (min-width: 460px) {
+    #portfolio{
+        .card{
+            grid-column: span 4;
+        }
+    }
+    #contact{
+        input{
+            &:nth-child(1){
+                grid-column: span 4;
+            }
+            &:nth-child(2){
+                grid-column: span 4;
+            }
+            &:nth-child(4){
+                grid-column: 3/5;
+            }
+        }
+    }
+}
+
+@media (min-width: 960px) {
+    #about{
+        grid-template-areas: ". . title title title title . ."
+                   "one one one one one . img img"
+                   "two two two two two . img img"
+                   "three three three three three . img img"
+                   "fore fore fore fore fore . img img";
+        .image{
+            width: 100%;
+            grid-area: img;
+        }
+        p{
+            &:nth-child(1){
+                grid-area: one;
+            }
+            &:nth-child(2){
+                grid-area: two;
+            }
+            &:nth-child(3){
+                grid-area: three;
+            }
+            &:nth-child(4){
+                grid-area: fore;
+            }
+        }
+    }
+    #portfolio{
+        grid-template-areas: ". . title title title title . ."
+                             "seven seven . two two . three three"
+                             "fore fore . five five . six six";
+        .main-title{
+            grid-area: title;
+        }
+        .card{
+            &:nth-child(2){
+                grid-area: two;
+            }
+            &:nth-child(3){
+                grid-area: three;
+            }
+            &:nth-child(4){
+                grid-area: fore;
+            }
+            &:nth-child(5){
+                grid-area: five;
+            }
+            &:nth-child(6){
+                grid-area: six;
+            }
+            &:nth-child(7){
+                grid-area: seven;
+            }
+        }
+    }
+    main{
+        header{
+            ul{
+                display: flex;
+                li{
+                    a{
+                        color: crimson;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    body{
+        font-size: 20px;
+    }
+    #contact{
+        height: 300px;
+    }
+}

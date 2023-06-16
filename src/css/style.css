@@ -140,6 +140,7 @@ main .text h2:nth-child(3) {
   margin-bottom: 10px;
   position: relative;
   color: crimson;
+  font-weight: bold;
 }
 .main-title::before {
   content: "";
